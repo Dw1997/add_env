@@ -8,7 +8,7 @@ env_vm.proxy = function (obj) {
             return Reflect.set(...arguments);
         },
         get(target, prototype, receiver) {
-            console.log('get--->', target, prototype, receiver);
+            console.log('get--->', target, prototype, target[prototype]);
             return target[prototype];
         }
     })
