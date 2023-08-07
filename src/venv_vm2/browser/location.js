@@ -10,11 +10,10 @@ Object.defineProperties(Location.prototype, {
         configurable: true
     }
 });
-////////////////////////
-Location.prototype.host = "y.qq.com";
-////////////////////////
-
 
 location = {};
 location.__proto__ = Location.prototype;
+////////////////////////
+location.host = "i.y.qq.com";
+////////////////////////
 location = env_vm.proxy(location);

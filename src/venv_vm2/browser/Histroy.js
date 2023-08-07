@@ -11,7 +11,11 @@ Object.defineProperties(Histroy.prototype, {
         configurable: true
     }
 });
+/////////////////
+Histroy.prototype.back = function back() { debugger; };
+env_vm.safefunction(Histroy.prototype.back);
 
+/////////////////
 
 history = {};
 history.__proto__ = Histroy.prototype;
