@@ -11,6 +11,9 @@ Object.defineProperties(HTMLDivElement.prototype, {
 });
 
 
+HTMLDivElement.prototype.__proto__ = HTMLElement.prototype;
+
+
 
 
 

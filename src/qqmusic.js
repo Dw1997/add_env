@@ -391,5 +391,5 @@ r.g = function () {
     }
 
 
-t_data = JSON.stringify({ "comm": { "cv": 4747474, "ct": 24, "format": "json", "inCharset": "utf-8", "outCharset": "utf-8", "notice": 0, "platform": "yqq.json", "needNewCode": 1, "uin": 0, "g_tk_new_20200303": 2090557760, "g_tk": 2090557760 }, "req_1": { "module": "music.globalComment.CommentRead", "method": "GetNewCommentList", "param": { "BizType": 2, "BizId": "40206175", "LastCommentSeqNo": "1265985562608698880", "PageSize": 25, "PageNum": 1, "FromCommentId": "", "WithHot": 0, "PicEnable": 1, "LastTotal": 56, "LastTotalVer": "1690354293025564268" } } })
+t_data = JSON.stringify({ "comm": { "g_tk": 5381, "uin": "", "format": "json", "inCharset": "utf-8", "outCharset": "utf-8", "notice": 0, "platform": "h5", "needNewCode": 1 }, "req_0": { "module": "music.pf_song_detail_svr", "method": "get_song_detail", "param": { "song_id": 424209173 } } })
 window._getSecuritySign(t_data);

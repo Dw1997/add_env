@@ -16,5 +16,7 @@ Object.defineProperties(Screen.prototype, {
 ///////////
 
 screen = {};
-screen.__proro__ = Screen.prototype;
+screen.width = 2560;
+screen.height = 1440;
+screen.__proto__ = Screen.prototype;
 screen = env_vm.proxy(screen);

@@ -7,7 +7,7 @@ env_vm.safefunction(Histroy);
 
 Object.defineProperties(Histroy.prototype, {
     [Symbol.toStringTag]: {
-        value: "Location",
+        value: "Histroy",
         configurable: true
     }
 });
