@@ -16,6 +16,6 @@ location.__proto__ = Location.prototype;
 ////////////////////////
 location.host = "www.toutiao.com";
 location.href = "https://www.toutiao.com/?wid=1691480493012"
-location.protocol = "https:"
+location.protocol = "http:"
 ////////////////////////
 location = env_vm.proxy(location);

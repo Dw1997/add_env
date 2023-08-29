@@ -12,6 +12,7 @@ Object.defineProperties(Navigation.prototype, {
 
 
 ////////////////////////
+Navigation.prototype.appVersion = "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36";
 Navigation.prototype.userAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/115.0.0.0";
 Navigation.prototype.languages = ["zh-CN"];
 Navigation.prototype.plugins = [];
@@ -30,3 +31,8 @@ for (var prototype_ in Navigation.prototype) {
 ////////////////////////
 
 navigator = env_vm.proxy(navigator);
+
+
+
+// 瑞数检测
+webkitPersistentStorage = {};

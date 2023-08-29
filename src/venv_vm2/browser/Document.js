@@ -7,6 +7,11 @@ Object.defineProperties(Document.prototype, {
         configurable: true
     }
 });
+////////////////
+Document.prototype.exitFullscreen = function () {
+    debugger;
+}; env_vm.safefunction(Document.prototype.exitFullscreen);
+////////////////
 
 
 document = {};
@@ -35,6 +40,15 @@ document.createEvent = function createEvent(eventName) {
     }
 }; env_vm.safefunction(document.createEvent);
 
+document.addEventListener = function addEventListener() {
+    debugger;
+}; env_vm.safefunction(document.addEventListener);
+
+
+document.getElementsByTagName = function getElementsByTagName(tagname) {
+    debugger;
+    return [];
+}; env_vm.safefunction(document.addEventListener);
 ////////////////////
 
 

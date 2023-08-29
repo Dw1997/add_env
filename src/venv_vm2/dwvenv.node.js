@@ -3,9 +3,15 @@ var fs = require("fs");
 var vmtools = require('./utils/tools.node');
 var htmlelement = require('./browser/Htmlelements/htmlelement.node');
 
-function GetCode() {
+function run(config, func_text) {
     var code = "";
     code += vmtools.GetCode() + "\r\n";
+
+    for (var item in config) {
+        code += "env_vm.memory.config." + item + "=" + config["item"] + ";\r\n";
+    }
+    code += func_text + ";\r\n";
+
 
     code += fs.readFileSync(`${__dirname}/browser/EventTarget.js`) + "\r\n";
     code += fs.readFileSync(`${__dirname}/browser/WindowProperties.js`) + "\r\n";
@@ -15,6 +21,13 @@ function GetCode() {
     code += fs.readFileSync(`${__dirname}/browser/Histroy.js`) + "\r\n";
     code += fs.readFileSync(`${__dirname}/browser/Screen.js`) + "\r\n";
     code += fs.readFileSync(`${__dirname}/browser/Storage.js`) + "\r\n";
+    code += fs.readFileSync(`${__dirname}/browser/IDBFactory.js`) + "\r\n";
+
+
+    // code += fs.readFileSync(`${__dirname}/browser/MimeType.js`) + "\r\n";
+    // code += fs.readFileSync(`${__dirname}/browser/Plugin.js`) + "\r\n";
+    // code += fs.readFileSync(`${__dirname}/browser/PluginArray.js`) + "\r\n";
+    // code += fs.readFileSync(`${__dirname}/browser/MimeTypeArray.js`) + "\r\n";
 
 
     // 把所有element加载
@@ -26,4 +39,4 @@ function GetCode() {
     return code;
 }
 
-module.exports = { GetCode }
+module.exports = { run }

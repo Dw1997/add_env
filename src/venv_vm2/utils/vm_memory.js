@@ -7,3 +7,5 @@ env_vm.memory = {
 };
 env_vm.memory.htmlelements = {};
 env_vm.memory.storage = {};
+
+env_vm.memory.Plugin = {};
